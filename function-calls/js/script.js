@@ -1,24 +1,29 @@
 /**
- * Title of Project
- * Author Name
+ * Some Random Game
+ * Benedict Ambayec
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * One of the first prototypes of a game, I'll make on JS.
+ * Might be scuffed but it's all good, we're all learning.
+ * 
  */
 
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * making 540x480 canvas for the game
 */
 function setup() {
-
+    //painting a canvas
+    createCanvas(640, 480);
 }
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * setting the background for our stage
 */
 function draw() {
-
+    //pink BG
+    background(255, 100, 100);
+    //white space
+    rect(200, 80, 240, 320);
 }
