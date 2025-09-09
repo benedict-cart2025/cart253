@@ -14,36 +14,61 @@
 */
 function setup() {
          // e=mc squared
-    createCanvas(640, 640);
+    createCanvas(640, 480);
+
 }
 
 
 /**
  * this is kinda difficult
 */
-function draw() {
-    // gris
- background(150, 150, 150);
 
- // The main part of the record is red
-    push();
-    fill(255, 0, 0);
-    stroke(255, 255, 255);
-    ellipse(320, 320, 480, 480);
-    pop();
-
-    // The label on the record
-    push();
-    fill(255, 255, 255);
-    noStroke();
-    ellipse(320, 320, 140, 140);
-    pop();
-
-    // The hole in the record
-    push();
-    fill(150, 150, 150);
-    stroke(50, 50, 50);
-    ellipse(320, 320, 20, 20);
-    pop();
+function draw(){
+    drawSky();
+    drawGround();
+    drawMoon();
+    drawPlanet();
+    drawAlien();
+    drawCapsule();
 }
 
+function drawSky() {
+    // outer space
+ background(120, 74, 237);
+}
+
+function drawGround() {
+    // ground of the moon?
+    push();
+	noStroke();
+	fill(247, 246, 143);
+	rect(0, 400, 640, 480);
+	pop();
+}
+
+function drawCapsule() {
+    //half circle structure
+    push();
+	noStroke();
+	fill(227, 227, 227);
+	square(200, 240, 280, 180);
+	pop();
+}
+
+function drawAlien() {
+    //lil half circle blob
+     push();
+	noStroke();
+	fill(63, 181, 69);
+	circle(200, 240, 280, 180);
+	pop();
+}
+
+function drawPlanet() {
+    //  mars?    
+    push();
+	noStroke();
+	fill(191, 77, 77);
+	circle(200, 240, 280, 180);
+	pop();
+}
