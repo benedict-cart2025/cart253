@@ -60,7 +60,7 @@ function drawAlien() {
      push();
 	noStroke();
 	fill(63, 181, 69);
-	circle(200, 240, 280, 180);
+	circle(100, 240, 280, 180);
 	pop();
 }
 
@@ -69,6 +69,6 @@ function drawPlanet() {
     push();
 	noStroke();
 	fill(191, 77, 77);
-	circle(200, 240, 280, 180);
+	circle(150, 300, 280, 180);
 	pop();
 }
