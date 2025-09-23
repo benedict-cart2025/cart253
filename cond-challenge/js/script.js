@@ -52,18 +52,18 @@ function draw() {
   drawPuck();
   drawTarget();
 
-  checkTarget()
+  checkTarget();
 
-  const d = dist(user.x, user.y, target.x, target.y);
+  const d = dist(userEllipse.x, userEllipse.y, targetEllipse.x, targetEllipse.y);
 
-  const overlap = (d < user.size/2 + target.size/2);
+  const overlap = (d < userEllipse.size/2 + targetEllipse.size/2);
 
  if (overlap) {
-    target.fill = target.fills.overlap;
+    targetEllipse.fill = targetEllipse.fills.overlap;
   }
 
   else {
-    targetCircle.fill = targetCircle.fills.noOverlap;
+    targetEllipse.fill = targetEllipse.fills.noOverlap;
   }
   
 }
