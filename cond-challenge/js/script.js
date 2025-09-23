@@ -51,7 +51,9 @@ function draw() {
   // Draw the user and puck
   drawUser();
   drawPuck();
+  movePuck();
   drawTarget();
+  
 }
 
 /**
@@ -90,4 +92,17 @@ function drawTarget() {
   fill(target.fill);
   ellipse(target.x, target.y, target.size);
   pop();
+}
+
+function movePuck()
+{
+    // Calculate distance between circles' centres
+  const d = dist(user.x, user.y, target.x, target.y);
+  const overL = (d < user.size/2 + target.size/2);
+  if (overL) {
+    target.fill = target.fills.overlap;
+  }
+  else {
+    target.fill = target.fills.noOverlap;
+  }
 }
