@@ -13,6 +13,13 @@ const puck = {
   fill: "#ff0000"
 };
 
+const target = {
+  x: 300,
+  y: 100,
+  size: 80,
+  fill: "#402f9eff"
+};
+
 const user = {
   x: undefined, // will be mouseX
   y: undefined, // will be mouseY
@@ -32,7 +39,6 @@ function setup() {
  */
 function draw() {
   background("#aaaaaa");
-  movePuck();
   
   // Move user circle
   moveUser();
@@ -40,6 +46,7 @@ function draw() {
   // Draw the user and puck
   drawUser();
   drawPuck();
+  drawTarget();
 }
 
 /**
@@ -65,6 +72,14 @@ function drawUser() {
  * Displays the puck circle
  */
 function drawPuck() {
+  push();
+  noStroke();
+  fill(puck.fill);
+  ellipse(puck.x, puck.y, puck.size);
+  pop();
+}
+
+function drawTarget() {
   push();
   noStroke();
   fill(puck.fill);
