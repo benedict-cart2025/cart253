@@ -17,7 +17,11 @@ const target = {
   x: 300,
   y: 100,
   size: 80,
-  fill: "#402f9eff"
+  fill: "#402f9eff",
+  fills:{
+    noOverlap: "#402f9eff",
+    overlap: "#237e23ff" 
+  }
 };
 
 const user = {
@@ -47,6 +51,21 @@ function draw() {
   drawUser();
   drawPuck();
   drawTarget();
+
+  checkTarget()
+
+  const d = dist(user.x, user.y, target.x, target.y);
+
+  const overlap = (d < user.size/2 + target.size/2);
+
+ if (overlap) {
+    target.fill = target.fills.overlap;
+  }
+
+  else {
+    targetCircle.fill = targetCircle.fills.noOverlap;
+  }
+  
 }
 
 /**
@@ -82,7 +101,7 @@ function drawPuck() {
 function drawTarget() {
   push();
   noStroke();
-  fill(puck.fill);
-  ellipse(puck.x, puck.y, puck.size);
+  fill(target.fill);
+  ellipse(target.x, target.y, target.size);
   pop();
 }
