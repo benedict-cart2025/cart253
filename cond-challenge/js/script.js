@@ -16,12 +16,13 @@ const puck = {
 const target = {
   x: 300,
   y: 100,
-  size: 80,
+  size: 100,
   fill: "#402f9eff",
-  fills:{
-    noOverlap: "#402f9eff",
-    overlap: "#237e23ff" 
+  fills: {
+    noOverlap: "#402f9eff", // red for no overlap
+    overlap: "#2d672dff" // green for overlap
   }
+
 };
 
 const user = {
@@ -42,7 +43,7 @@ function setup() {
  * Move the user circle, check for overlap, draw the two circles
  */
 function draw() {
-  background("#aaaaaa");
+  background("#a7dfffff");
   
   // Move user circle
   moveUser();
@@ -51,21 +52,6 @@ function draw() {
   drawUser();
   drawPuck();
   drawTarget();
-
-  checkTarget();
-
-  const d = dist(userEllipse.x, userEllipse.y, targetEllipse.x, targetEllipse.y);
-
-  const overlap = (d < userEllipse.size/2 + targetEllipse.size/2);
-
- if (overlap) {
-    targetEllipse.fill = targetEllipse.fills.overlap;
-  }
-
-  else {
-    targetEllipse.fill = targetEllipse.fills.noOverlap;
-  }
-  
 }
 
 /**
