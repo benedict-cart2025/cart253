@@ -150,6 +150,32 @@ body{
         z-index: 1000;
         color: white;
     }
-        
+
+    nav a{
+        color: white;
+    }
+    
+    h1{
+        margin-top: 50px;
+    }
+
+    #wrapper{
+        margin-top: 50px;
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+        float: none;
+    }
+
+    footer{
+        margin-top: 40px;
+        font-size: 12px;
+    }
+
+    .books {
+        grid-template-columns: auto auto;
+        gap: 16px;
+    }
+
     
 }
