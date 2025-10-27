@@ -273,3 +273,24 @@ body{
 
     
 }
+
+.hamburger-menu{
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburger-menu button{
+    background: none;
+    border: none;
+    font-size: 2em;
+    color: gray;
+}
+
+.hamburger-menu button .fa-bars{
+    cursor: pointer;
+}
+
+.close-menu{
+    display: none;
+}
