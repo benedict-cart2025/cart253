@@ -16,7 +16,7 @@ const ball = {
     height: 10,
     velocity: {
         x: 0,
-        y: 10
+        y: 4
     }
 };
 
@@ -67,9 +67,24 @@ function movePaddle(paddle) {
  */
 function moveBall(ball) {
 
-   
 
-        
+
+    // hasTouched = false
+    // if (!hasTouched) {
+
+        ball.y += 3
+    // }
+
+    //   if (hasTouched) {
+
+    //     ball.y += 1;
+    // }   
+
+    //     if (checkOverlap){
+    //         hasTouched = true
+    //     }
+
+
 }
 
 /**
@@ -77,6 +92,12 @@ function moveBall(ball) {
  */
 function handleBounce(ball, paddle) {
 
+        const d = dist (ball.x, ball.y, paddle.x, paddle.y);
+        const hit = (d < ball.width / 2 + paddle.height / 2);
+        if (hit) {
+            ball.velocity.y = -4
+        }
+    
 }
 
 /**
@@ -120,10 +141,6 @@ function drawBall2(ball2) {
  */
 function checkOverlap(rectA, rectB) {
 
-const d = dist (arguments.x, arguments.y, ball.x, ball.y)
-if (d < arguments.size / 2 + ball.size / 2){
-    
-}
     return (rectA.x + rectA.width/2 > rectB.x - rectB.width/2 &&
           rectA.x - rectA.width/2 < rectB.x + rectB.width/2 &&
           rectA.y + rectA.height/2 > rectB.y - rectB.height/2 &&
