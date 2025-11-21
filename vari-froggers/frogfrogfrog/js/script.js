@@ -77,12 +77,12 @@ function moveFly() {
 }
 
 /**
- * Draws the fly as a black circle
+ * Draws the fly as a red circle
  */
 function drawFly() {
     push();
     noStroke();
-    fill("#000000");
+    fill("#FF0000");
     ellipse(fly.x, fly.y, fly.size);
     pop();
 }
