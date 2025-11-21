@@ -1,0 +1,1 @@
+i dont got a pln, just sumthin simple thats easy to do

@@ -11,6 +11,7 @@
 "use strict";
 
 let carData = undefined;
+let carName = undefined;
 let dinosaurData = undefined;
 let langData = undefined;
 let lang = "fr";
@@ -58,10 +59,9 @@ let carName;
  * Load the car and dinosaur data
  */
 function preload() {
-    langData = loadJSON("Lang/lang.json")
-    dinosaurData = loadJSON("Lang/dinosaurs.json")
-    carData = loadJSON("Lang/cars.json")
-    nonsenseData = loadJSON("Lang/flib.json")
+    langData = loadJSON
+    dinosaurData = loadJSON
+    carData = loadJSON
 }
 
 /**
