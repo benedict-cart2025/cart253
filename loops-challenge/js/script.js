@@ -54,3 +54,14 @@ function draw() {
     stroke(250);
     line(500, 0, 500, height);
 }
+
+while (y <= height) {
+        
+        ellipse(x, y, line);
+   
+        y += diameter;
+    }
+
+for (let i = 0; i < 5; i++) {
+    
+}
