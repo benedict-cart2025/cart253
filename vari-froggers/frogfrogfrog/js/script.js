@@ -96,10 +96,11 @@ function resetFly() {
 }
 
 /**
- * Moves the frog to the mouse position on x
+ * Moves the frog to the mouse position on x and y
  */
 function moveFrog() {
     frog.body.x = mouseX;
+    frog.body.y = mouseY;
 }
 
 /**
