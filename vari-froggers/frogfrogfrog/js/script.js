@@ -92,7 +92,7 @@ function drawFly() {
  */
 function resetFly() {
     fly.x = 0;
-    fly.y = random(0, 1000);
+    fly.y = random(0, 480);
 }
 
 /**
