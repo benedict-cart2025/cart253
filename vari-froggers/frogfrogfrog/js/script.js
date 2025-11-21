@@ -137,21 +137,21 @@ function moveTongue() {
 function drawFrog() {
     // Draw the tongue tip
     push();
-    fill("#ff0000");
+    fill("#d7e612ff");
     noStroke();
     ellipse(frog.tongue.x, frog.tongue.y, frog.tongue.size);
     pop();
 
     // Draw the rest of the tongue
     push();
-    stroke("#ff0000");
+    stroke("#d7e612ff");
     strokeWeight(frog.tongue.size);
     line(frog.tongue.x, frog.tongue.y, frog.body.x, frog.body.y);
     pop();
 
     // Draw the frog's body
     push();
-    fill("#00ff00");
+    fill("#d614f0ff");
     noStroke();
     ellipse(frog.body.x, frog.body.y, frog.body.size);
     pop();
